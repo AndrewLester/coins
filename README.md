@@ -1,9 +1,6 @@
 # Coin Puzzle
 Solving a coin puzzle
 
-### Compilation for Web
-    npm install
-    grunt bundle:node_modules/webppl-viz
 ## The Puzzle
 The coin puzzle solved by this program has a few key rules:
 - Three coins are drawn from a pool of equal numbers of 1, 5, 10, and 25 cent coins.
