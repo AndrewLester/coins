@@ -1,0 +1,10 @@
+var coins = [1, 5, 10, 25];
+  
+var model = function() {
+    var lengths = [uniformDraw(coins), uniformDraw(coins), uniformDraw(coins)];
+
+    var sortedLengths = sort(lengths);
+    return sortedLengths[0] + sortedLengths[1] > sortedLengths[2];
+};
+
+viz.auto(Enumerate(model));

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/webppl/webppl-editor.css">
+<link rel="stylesheet" type="text/css" href="/webppl/webppl-viz.css">
+</head>
+<body>
+<pre id="coins-code">
+<script>
+const elem = document.getElementById('coins-code');
+fetch('/coins.wppl').then((res) => res.text()).then((text) => elem.textContent = text);
+</script>
+</pre>
+<script src="/webppl/webppl.js"></script> <!-- compiled webppl library; get this from https://github.com/probmods/webppl -->
+<script src="/webppl/webppl-editor.js"></script>
+<script src="/webppl/webppl-viz.js"></script>
+<script>
+    var preEls = Array.prototype.slice.call(document.querySelectorAll("pre"));
+     preEls.map(function(el) { editor.setup(el, {language: 'webppl'}); });
+</script>
+</body>
+</html>
